@@ -1,0 +1,20 @@
+@use "../foundation/" as *;
+.c-table {
+  tr {
+    border-bottom: 1px solid #aaa;
+    th, td {
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+    th {
+      width: 120px;
+      small {
+        display: block;
+      }
+    }
+    td {
+      // background-color: rgba($color-white , .8);
+    }
+  }
+}

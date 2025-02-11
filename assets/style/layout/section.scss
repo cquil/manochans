@@ -1,0 +1,48 @@
+
+@use "../foundation/" as *;
+
+$sizes: (
+  xlg: (120, 60),
+  lg: (100, 50),
+  md: (80, 40),
+  sm: (64, 32),
+  xs: (32, 16),
+);
+
+// rem変換関数
+@function rem-calc($value) {
+  @return ($value / 16) * 1rem;
+}
+
+
+.l-section {
+
+  // サイズ設定
+  @each $key, $value in $sizes {
+    $pc-value: nth($value, 1); // PC用
+    $sp-value: nth($value, 2); // SP用
+
+    &.is-#{$key} {
+      padding-top: rem-calc($pc-value);
+      padding-bottom: rem-calc($pc-value);
+      @include breakpoint(750, down) {
+        padding-top: rem-calc($sp-value);
+        padding-bottom: rem-calc($sp-value);
+      }
+
+      &-top {
+        padding-top: rem-calc($pc-value);
+        @include breakpoint(750, down) {
+          padding-top: rem-calc($sp-value);
+        }
+      }
+
+      &-bottom {
+        padding-bottom: rem-calc($pc-value);
+        @include breakpoint(750, down) {
+          padding-bottom: rem-calc($sp-value);
+        }
+      }
+    }
+  }
+}

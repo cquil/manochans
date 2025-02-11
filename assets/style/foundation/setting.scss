@@ -1,0 +1,33 @@
+
+// # 1. mainColor
+$color-white : #fff;
+$color-black : #000;
+
+$color-primary: #c5b6dd;
+$color-secondary : #cfa7f0;
+$color-gray : #ccc;
+
+// # 2. font
+$font-base-size: 16;
+$font-base-line-height: 1.75;
+$font-base-letter-spacing: 0.05em;
+$font-base-color: #222;
+$font-base-family: 'Zen Maru Gothic', sans-serif;
+$font-base-weight: normal;
+$font-base-style: normal;
+
+
+// # 3. border
+$border-base-color: #CCC;
+$border-base-width: 1px;
+$border-radius: 5px;
+$border: $border-base-width solid $border-base-color;
+
+
+// # 4. background
+$color-background: #f3f3f3;
+
+// # Two columns
+$asideContainer: 320;
+$asideMargin: 70;
+$mainContainer: calc(100% - #{$asideContainer}px - #{$asideMargin}px);

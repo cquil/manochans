@@ -1,0 +1,62 @@
+@use "../foundation/" as *;
+
+
+.l-header {
+  position: fixed;
+  top: 16px;
+  width: 100%;
+  z-index: 999;
+  padding: 0 64px;
+  @include breakpoint(950, down) {
+    padding: 0 32px;
+    top: 8px;
+  }
+  @include breakpoint(750, down) {
+    padding: 0 16px;
+  }
+  &__container {
+    background: rgba($color-white , .7);
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    border-radius: 100px;
+    box-shadow: 0px 5px 10px rgba($color-black, .1);
+    @include breakpoint(950, down) {
+      padding: 16px;
+    }
+    @include breakpoint(750, down) {
+      padding: 8px 16px;
+    }
+  }
+
+  &__logo {
+    margin: 0;
+    width: 64px;
+    @include breakpoint(950, down) {
+      width: 32px;
+    }
+    a , img {
+      display: block;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    @include breakpoint(950, down) {
+      display: none;
+    }
+
+  }
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__nav-item {}
+  &__nav-item {}
+  &__nav-link {
+    display: block;
+    color: $font-base-color;
+    text-decoration: none;
+  }
+}
