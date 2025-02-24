@@ -1,0 +1,26 @@
+
+@use "../foundation/" as *;
+
+.p-cute-point {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  &__item {
+    &:nth-child(even) {
+      .p-cute-point__item-image {
+        margin-left: auto;
+      }
+      .p-cute-point__item-content {
+        margin-left: auto;
+      }
+    }
+  }
+  &__item-image {
+    width: 90%;
+  }
+  &__item-content {
+    width: 90%;
+  }
+  &__item-title {}
+  &__item-text {}
+}

@@ -1,37 +1,54 @@
 
 <script setup lang="ts">
-import { onMounted } from "vue";
-import { register } from "swiper/element/bundle";
-import "swiper/swiper-bundle.css"; // Swiperのスタイルをインポート
+import { ref, onMounted } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/effect-fade";
+const swiperFirst = ref();
+const swiperSecond = ref();
+
 onMounted(() => {
-  register();
+  if (swiperFirst.value && swiperSecond.value) {
+    swiperFirst.value.controller.control = swiperSecond.value;
+    swiperSecond.value.controller.control = swiperFirst.value;
+  }
 });
 </script>
 
 <template>
   <div class="p-main-visual">
-    <!-- <div class="p-main-visual__scroll-bar"></div> -->
     <div class="p-main-visual__container">
-      <div class="p-main-visual__content">
-        <h2 class="p-main-visual__title">魔ノむえる<br>非公式ファンサイト</h2>
-        <p class="p-main-visual__text">魔ノむえるちゃんに関する情報を発信中</p>
-      </div>
 
       <div class="p-main-visual__images">
-        <client-only>
-          <swiper-container
-            loop="true"
-            speed="3000"
+          <Swiper ref="swiperFirst"
+            :loop="true"
+            :speed="3000"
             effect="fade"
             :autoplay="{ delay: 3000, disableOnInteraction: false }"
             :fade-effect="{ crossFade: true }"
+            :controller="{ control: swiperSecond }"
           >
-            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-01.jpg" /></swiper-slide>
-            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-02.jpg" /></swiper-slide>
-            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-03.jpg" /></swiper-slide>
-          </swiper-container>
-        </client-only>
+            <SwiperSlide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-01.jpg" /></SwiperSlide>
+            <SwiperSlide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-02.jpg" /></SwiperSlide>
+            <SwiperSlide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-03.jpg" /></SwiperSlide>
+          </Swiper>
       </div>
+
+      <div class="p-main-visual__images">
+          <Swiper ref="swiperSecond"
+            :loop="true"
+            :speed="3000"
+            effect="fade"
+            :autoplay="{ delay: 3000, disableOnInteraction: false }"
+            :fade-effect="{ crossFade: true }"
+            :controller="{ control: swiperFirst }"
+          >
+            <SwiperSlide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-02.jpg" /></SwiperSlide>
+            <SwiperSlide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-03.jpg" /></SwiperSlide>
+            <SwiperSlide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-01.jpg" /></SwiperSlide>
+          </Swiper>
+      </div>
+
     </div>
   </div>
 </template>

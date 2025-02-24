@@ -10,8 +10,4 @@
   @include breakpoint(small down) {
     padding-inline: 16px;
   }
-
-  &.is-sm {
-    max-width: rem-calc(944);
-  }
 }

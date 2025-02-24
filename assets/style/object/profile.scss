@@ -2,18 +2,13 @@
 @use "../foundation/" as *;
 
 .p-profile {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   &__item {
-    border-radius: 64px 0;
+    border-radius: 32px 0;
     background: rgba($color-primary , .2);
     padding: 32px;
-  }
-
-  &__item-title {
-    @include webfont();
-    margin: 0 0 12px;
   }
 
   &__item-table {

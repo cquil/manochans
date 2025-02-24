@@ -1,0 +1,19 @@
+@use "../foundation/" as *;
+
+.p-first-view {
+  height: calc(100cqh - 136px);
+  @include breakpoint(950, down) {
+    height: auto;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+  }
+  &__image {
+    width: calc(514 / 596 * 100%);
+    margin: 0 auto;
+  }
+}

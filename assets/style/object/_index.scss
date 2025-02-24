@@ -1,8 +1,17 @@
 
 // component
 @forward "table";
+@forward "heading-wrapper";
+@forward "button-wrapper";
+@forward "heading";
+@forward "button";
 
 // page
 @forward "mainvisual";
-@forward "second-view";
+@forward "first-view";
+@forward "lead";
 @forward "profile";
+@forward "news";
+@forward "banner";
+@forward "music-card";
+@forward "cute-point";

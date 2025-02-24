@@ -1,0 +1,27 @@
+@use "../foundation/" as *;
+
+.u-visible-md {
+  display: none;
+  @include breakpoint(950, down) {
+    display: block;
+  }
+}
+.u-visible-sm {
+  display: none;
+  @include breakpoint(750, down) {
+    display: block;
+  }
+}
+
+.u-hidden-md {
+  display: block;
+  @include breakpoint(950, down) {
+    display: none;
+  }
+}
+.u-hidden-sm {
+  display: block;
+  @include breakpoint(750, down) {
+    display: none;
+  }
+}

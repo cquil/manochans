@@ -1,0 +1,41 @@
+
+@use "../foundation/" as *;
+
+.c-heading {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.c-heading {
+  // h1
+  &.is-xlg {
+    font-size: 32px;
+    @include webfont();
+  }
+  // h2
+  &.is-lg {
+    font-size: 28px;
+    @include webfont();
+  }
+  // h3
+  &.is-md {
+    font-size: 24px;
+    @include webfont();
+  }
+  // h4
+  &.is-sm {
+    font-size: 20px;
+    @include webfont();
+  }
+  // h5
+  &.is-xs {
+    font-size: 16px;
+    @include webfont();
+  }
+  // h6
+  &.is-xxs {
+    font-size: 14px;
+    @include webfont();
+  }
+}

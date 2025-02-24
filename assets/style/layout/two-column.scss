@@ -1,3 +1,26 @@
 
 @use "../foundation/" as *;
 
+.l-two-column {
+  padding: 136px 0 0;
+  padding-inline: 64px;
+  max-width: 1920px;
+  margin: auto;
+  @include breakpoint(950, down) {
+    padding: 100px 32px 0;
+  }
+  @include breakpoint(750, down) {
+    padding: 80px 16px 0;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    @include breakpoint(950, down) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  &__main {}
+  &__contents {}
+}

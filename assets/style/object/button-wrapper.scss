@@ -1,0 +1,71 @@
+@use "../foundation/" as *;
+
+.c-button-wrapper {
+  &.is-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &.is-center {
+    display: flex;
+    justify-content: center;
+  }
+  &.is-xlg {
+    margin: 100px 0;
+    &-top {
+      margin-bottom: 100px;
+    }
+    &-bottom {
+      margin-bottom: 100px;
+    }
+  }
+
+  &.is-lg {
+    margin: 80px 0;
+    &-top {
+      margin-top: 80px;
+    }
+    &-bottom {
+      margin-bottom: 80px;
+    }
+  }
+
+  &.is-md {
+    margin: 64px 0;
+    &-top {
+      margin-top: 64px;
+    }
+    &-bottom {
+      margin-bottom: 64px;
+    }
+  }
+
+  &.is-sm {
+    margin: 48px 0;
+    &-top {
+      margin-top: 48px;
+    }
+    &-bottom {
+      margin-bottom: 48px;
+    }
+  }
+
+  &.is-xs {
+    margin: 32px 0;
+    &-top {
+      margin-top: 32px;
+    }
+    &-bottom {
+      margin-bottom: 32px;
+    }
+  }
+
+  &.is-xxs {
+    margin: 24px 0;
+    &-top {
+      margin-top: 24px;
+    }
+    &-bottom {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -4,13 +4,13 @@
 </script>
 
 <template>
-  <div class="l-container">
-    <div class="p-profile">
+
+  <div class="p-profile">
 
 
-      <div class="p-profile__item">
-        <h2 class="p-profile__item-title">プロフィール</h2>
-        <table class="c-table p-profile__item-table">
+    <div class="p-profile__item">
+      <table class="c-table p-profile__item-table">
+        <tbody>
           <tr>
             <th>名前</th>
             <td>魔ノむえる</td>
@@ -27,12 +27,13 @@
             <th>身長</th>
             <td>153cm</td>
           </tr>
-        </table>
-      </div>
+        </tbody>
+      </table>
+    </div>
 
-      <div class="p-profile__item">
-        <h2 class="p-profile__item-title">タグ</h2>
-        <table class="c-table p-profile__item-table">
+    <div class="p-profile__item">
+      <table class="c-table p-profile__item-table">
+        <tbody>
           <tr>
             <th>FM</th>
             <td>👾🖤</td>
@@ -57,11 +58,11 @@
             <th>CLIP</th>
             <td>#まのちょき</td>
           </tr>
-
-        </table>
-      </div>
-
-
+        </tbody>
+      </table>
     </div>
+
+
   </div>
+
 </template>

@@ -1,11 +1,14 @@
 
 @use "../foundation/" as *;
 
-.p-second-view {
-  &__lead {
+.p-lead {
+  &__text {
     margin: 0;
     text-align: center;
     font-weight: normal;
     font-size: 20px;
+    @include breakpoint(950, down) {
+      font-size: 16px;
+    }
   }
 }
