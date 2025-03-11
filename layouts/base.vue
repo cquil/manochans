@@ -8,3 +8,5 @@
   </main>
   <Footer />
 </template>
+
+<style></style>

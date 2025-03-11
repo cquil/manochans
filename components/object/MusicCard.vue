@@ -1,23 +1,43 @@
 
 <script setup lang="ts">
 
+defineNuxtComponent({
+  ssr: false
+});
+
+defineProps({
+  addClass: String,
+});
+
+import type { MicroCMSImage} from 'microcms-js-sdk';
+
+type Collabo = {
+  id: string;
+  title: string;
+  thumbnails: MicroCMSImage;
+  url: string;
+};
+
+const { data } = await useMicroCMSGetList<Collabo>({
+  endpoint: "collab",
+});
 </script>
 
 <template>
-  <Headings text="コラボ動画" marginClass="is-xxs-bottom" addClass="is-lg" />
-  <div class="p-music-card">
-    <NuxtLink to="/" class="p-music-card__item">
-      <div class="p-music-card__image"><img src="@/assets/images/img-main-visual-01.jpg" /></div>
-      <div class="p-music-card__content">
-        <div class="p-music-card__title">これはお知らせテキストですこれはお知らせテキストですこれはお知らせテキストです</div>
-        <div class="p-music-card__post">2000.01.01</div>
+  <div :class="['p-music-card', addClass]">
+    <NuxtLink
+      v-for="item in data?.contents"
+      :key="item.id"
+      :to="`${item.url}`"
+      class="p-music-card__item"
+      data-aos="custom-up"
+      data-aos-duration="600"
+      target="_blank">
+      <div class="p-music-card__image">
+        <img :src="'https://img.youtube.com/vi/' + item.thumbnails + '/maxresdefault.jpg'" />
       </div>
-    </NuxtLink>
-    <NuxtLink to="/" class="p-music-card__item">
-      <div class="p-music-card__image"><img src="@/assets/images/img-main-visual-01.jpg" /></div>
       <div class="p-music-card__content">
-        <div class="p-music-card__title">これはお知らせテキストですこれはお知らせテキストですこれはお知らせテキストです</div>
-        <div class="p-music-card__post">2000.01.01</div>
+        <div class="p-music-card__title">{{ item.title }}</div>
       </div>
     </NuxtLink>
   </div>

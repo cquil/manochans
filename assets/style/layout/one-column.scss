@@ -1,0 +1,15 @@
+
+@use "../foundation/" as *;
+
+.l-one-column {
+  padding: 136px 0 0;
+  padding-inline: 64px;
+  max-width: 1920px;
+  margin: auto;
+  @include breakpoint(950, down) {
+    padding: 100px 32px 0;
+  }
+  @include breakpoint(750, down) {
+    padding: 80px 16px 0;
+  }
+}

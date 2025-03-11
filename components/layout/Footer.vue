@@ -12,7 +12,7 @@
       </div>
       <ul class="l-footer__list">
         <li class="l-footer__item">
-          <NuxtLink to="#" class="l-footer__link">Privacy Policy</NuxtLink>
+          <NuxtLink to="privacy-policy" class="l-footer__link">Privacy Policy</NuxtLink>
         </li>
         <li class="l-footer__item">
           <NuxtLink to="#" class="l-footer__link">Terms of Service</NuxtLink>

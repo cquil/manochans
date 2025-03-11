@@ -1,0 +1,38 @@
+
+
+@use "../foundation/setting.scss" as *;
+
+* { // data-aos="custom-enter-view"
+  [data-aos="custom-enter-view"] {
+    opacity: 1;
+    transition-delay: 1s;
+    transition-property: transform, opacity;
+    background-color: $color-background-02;
+  }
+  [data-aos="custom-enter-view"].aos-animate {
+    opacity: 0;
+  }
+}
+
+* { // data-aos="custom-fade"
+  [data-aos="custom-fade"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+  [data-aos="custom-fade"].aos-animate {
+    opacity: 1;
+  }
+}
+
+* { // data-aos="custom-up"
+  [data-aos="custom-up"] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition-property: transform, opacity;
+
+  }
+  [data-aos="custom-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -13,17 +13,33 @@ definePageMeta({
       <div class="l-two-column__main">
         <Mainvisual />
       </div>
-      <!-- end main -->
       <div class="l-two-column__contents">
         <section class="l-section"><FirstView /></section>
         <section class="l-section"><Lead /></section>
-        <section class="l-section is-xlg is-top" id="section01"><Profile /></section>
-        <section class="l-section is-xlg is-top" id="section02"><News /></section>
-        <section class="l-section is-xlg is-top" id="section03"><CutePoint /></section>
-        <section class="l-section is-xlg is-top" id="section04"><Banner /></section>
-        <section class="l-section is-xlg is-top" id="section05"><MusicCard /></section>
+        <section class="l-section is-xlg is-top" id="profile"><Profile /></section>
+        <section class="l-section is-xlg is-top" id="news">
+          <Headings text="最新情報" marginClass="is-xxs-bottom" />
+          <News :addClass="'is-home'" />
+          <Buttons text="最新情報一覧へ" marginClass="is-xxs-top is-right" addClass="" toLink="/news/"/>
+        </section>
+        <section class="l-section is-xlg is-top" id="cute">
+          <Headings text="魅力ポイント" marginClass="is-xxs-bottom"  />
+          <CutePoint />
+        </section>
+        <section class="l-section is-xlg is-top" id="member">
+          <Headings text="メンシ限定" marginClass="is-xxs-bottom" />
+          <Member />
+        </section>
+        <section class="l-section is-xlg is-top" id="music">
+          <Headings text="コラボ動画" marginClass="is-xxs-bottom"  />
+          <MusicCard :addClass="'is-home'" />
+          <Buttons text="コラボ動画一覧へ" marginClass="is-xxs-top is-right" addClass="" toLink="/collaboration/"/>
+        </section>
+        <section class="l-section is-xlg is-top" id="history">
+          <Headings text="タイムライン" marginClass="is-xxs-bottom"  />
+          <History />
+        </section>
       </div>
-      <!-- end contents -->
     </div>
   </div>
 </template>

@@ -6,6 +6,9 @@
   padding-inline: 64px;
   max-width: 1920px;
   margin: auto;
+  @include breakpoint(1200, down) {
+    padding: 100px 32px 0;
+  }
   @include breakpoint(950, down) {
     padding: 100px 32px 0;
   }
@@ -14,7 +17,8 @@
   }
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: 835fr 1020fr;
     gap: 64px;
     @include breakpoint(950, down) {
       grid-template-columns: 1fr;

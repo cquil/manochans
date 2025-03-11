@@ -6,21 +6,47 @@
   flex-direction: column;
   gap: 64px;
   &__item {
+    display: flex;
+    gap: 16px;
     &:nth-child(even) {
-      .p-cute-point__item-image {
-        margin-left: auto;
+      flex-direction: row-reverse;
+      @include breakpoint(1200, down) {
+        flex-direction: column;
       }
-      .p-cute-point__item-content {
-        margin-left: auto;
-      }
+    }
+
+    @include breakpoint(1200, down) {
+      flex-direction: column;
     }
   }
   &__item-image {
-    width: 90%;
+    width: 100%;
+    box-shadow: 0px 10px 10px rgba($color-black, .1);
+    border-radius: 32px 0;
+    overflow: hidden;
+    @include breakpoint(1200, down) {
+      width: 100%;
+      border-radius: 24px 0;
+    }
+    img {
+      @include img-option;
+    }
   }
   &__item-content {
-    width: 90%;
+    width: 100%;
+    @include breakpoint(1200, down) {
+      width: 100%;
+    }
   }
-  &__item-title {}
-  &__item-text {}
+  &__item-title {
+    font-size: 24px;
+    margin: 0;
+    @include breakpoint(950, down) {
+      font-size: 18px;
+    }
+  }
+  &__item-text {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
 }

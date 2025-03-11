@@ -1,0 +1,21 @@
+
+@use "../foundation/" as *;
+
+.l-page-header {
+
+  &__container {
+    padding: 32px 32px;
+    @include breakpoint(950, down) {
+      padding: 0px 24px 24px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 64px;
+    @include webfont();
+    @include breakpoint(950, down) {
+      font-size: 32px;
+    }
+  }
+}

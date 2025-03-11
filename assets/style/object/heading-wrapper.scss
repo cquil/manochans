@@ -5,61 +5,115 @@
 
   &.is-xlg {
     margin: 100px 0;
+    @include breakpoint(950, down) {
+      margin: 80px 0;
+    }
     &-top {
       margin-top: 100px;
+      @include breakpoint(950, down) {
+        margin-top: 80px;
+      }
     }
     &-bottom {
       margin-bottom: 100px;
+      @include breakpoint(950, down) {
+        margin-bottom: 80px;
+      }
     }
   }
 
   &.is-lg {
     margin: 80px 0;
+    @include breakpoint(950, down) {
+      margin: 64px 0;
+    }
     &-top {
       margin-top: 80px;
+      @include breakpoint(950, down) {
+        margin-top: 64px;
+      }
     }
     &-bottom {
       margin-bottom: 80px;
+      @include breakpoint(950, down) {
+        margin-bottom: 64px;
+      }
     }
   }
 
   &.is-md {
     margin: 64px 0;
+    @include breakpoint(950, down) {
+      margin: 48px 0;
+    }
     &-top {
       margin-top: 64px;
+      @include breakpoint(950, down) {
+        margin-top: 48px;
+      }
     }
     &-bottom {
       margin-bottom: 64px;
+      @include breakpoint(950, down) {
+        margin-bottom: 48px;
+      }
     }
   }
 
   &.is-sm {
     margin: 48px 0;
+    @include breakpoint(950, down) {
+      margin: 32px 0;
+    }
     &-top {
       margin-top: 48px;
+      @include breakpoint(950, down) {
+        margin-top: 32px;
+      }
     }
     &-bottom {
       margin-bottom: 48px;
+      @include breakpoint(950, down) {
+        margin-bottom: 32px;
+      }
     }
   }
 
   &.is-xs {
     margin: 32px 0;
+    @include breakpoint(950, down) {
+      margin: 24px 0;
+    }
     &-top {
       margin-top: 32px;
+      @include breakpoint(950, down) {
+        margin-top: 24px;
+      }
     }
     &-bottom {
       margin-bottom: 32px;
+      @include breakpoint(950, down) {
+        margin-bottom: 24px;
+      }
     }
   }
 
   &.is-xxs {
     margin: 24px 0;
+    @include breakpoint(950, down) {
+      margin: 16px 0;
+    }
     &-top {
       margin-top: 24px;
+      @include breakpoint(950, down) {
+        margin-top: 16px;
+      }
     }
     &-bottom {
       margin-bottom: 24px;
+      @include breakpoint(950, down) {
+        margin-bottom: 16px;
+      }
     }
   }
 }

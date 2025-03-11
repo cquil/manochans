@@ -4,6 +4,7 @@
   height: calc(100cqh - 136px);
   @include breakpoint(950, down) {
     height: auto;
+    padding-bottom: 64px;
   }
   &__container {
     display: flex;
@@ -12,8 +13,113 @@
     height: 100%;
     align-items: center;
   }
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    width: calc(514 / 664 * 100%);
+  }
   &__image {
-    width: calc(514 / 596 * 100%);
+    width: 100%;
     margin: 0 auto;
+  }
+  &__label {
+    @include webfont();
+    background: $color-black;
+    padding: 6px 24px;
+    line-height: 1;
+    color: $color-white;
+    transform: rotate(-8deg);
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    @include breakpoint(950, down) {
+      font-size: 14px;
+      transform: rotate(-6deg);
+      padding: 6px 14px;
+    }
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 8px;
+      height: 100%;
+      background: $color-background-02;;
+    }
+    &::before {
+      left: -1px;
+      clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    }
+    &::after {
+      right: -1px;
+      clip-path: polygon(100% 0, 100% 100%, 0 50%);
+    }
+  }
+  &__float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    img {
+      animation: move 1.9s ease-in-out infinite alternate-reverse;
+    }
+    &:hover {
+      .p-first-view__message {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
+  &__message {
+    position: absolute;
+    top: -80%;
+    right: 30px;
+    width: fit-content;
+    background: rgba($color-white , 1);
+    padding: 4px 8px;
+    font-size: 12px;
+    transition: .3s;
+    opacity: 0;
+    transform: translateY(3px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+      margin: auto;
+      width: 16px;
+      height: 8px;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      background: rgba($color-white , 1);
+    }
+    &-text {
+      text-align: center;
+      white-space: nowrap;
+      text-decoration: none;
+      display: block;
+      color: $font-base-color;
+      @include hover() {
+        opacity: 1;
+        color: $color-primary;
+      }
+    }
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(10%);
   }
 }

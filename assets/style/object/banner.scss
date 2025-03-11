@@ -2,5 +2,10 @@
 @use "../foundation/" as *;
 
 .p-banner {
-  border: 1px solid #ccc;
+  &__image {
+    display: block;
+    img {
+      @include img-option;
+    }
+  }
 }

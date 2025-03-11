@@ -1,27 +1,50 @@
 
+
+
+
 <script setup lang="ts">
+
+defineNuxtComponent({
+  ssr: false
+});
+
+defineProps({
+  addClass: String,
+  
+});
+
+import type { MicroCMSImage} from 'microcms-js-sdk';
+
+type News = {
+  id: string;
+  title: string;
+  image: MicroCMSImage;
+  url: string;
+};
+
+const { data } = await useMicroCMSGetList<News>({
+  endpoint: "news",
+});
 
 </script>
 
 <template>
-  <Headings text="最新情報" marginClass="is-xxs-bottom" addClass="is-lg" />
 
-  <div class="p-news">
-    <NuxtLink to="/" class="p-news__item">
-      <div class="p-news__image"><img src="@/assets/images/img-main-visual-01.jpg" /></div>
+  <div :class="['p-news', addClass]">
+    <NuxtLink
+      v-for="item in data?.contents"
+      :key="item.id"
+      :to="`${item.url}`"
+      class="p-news__item"
+      data-aos="custom-up"
+      data-aos-duration="600"
+      target="_blank">
+      <div class="p-news__image"><img :src="item.image.url" /></div>
       <div class="p-news__content">
-        <div class="p-news__title">これはお知らせテキストですこれはお知らせテキストですこれはお知らせテキストです</div>
-        <div class="p-news__post">2000.01.01</div>
-      </div>
-    </NuxtLink>
-    <NuxtLink to="/" class="p-news__item">
-      <div class="p-news__image"><img src="@/assets/images/img-main-visual-01.jpg" /></div>
-      <div class="p-news__content">
-        <div class="p-news__title">これはお知らせテキストですこれはお知らせテキストですこれはお知らせテキストです</div>
-        <div class="p-news__post">2000.01.01</div>
+        <div class="p-news__title">{{ item.title }}</div>
+        <div class="p-news__post">{{ dateFormat(item.publishedAt ?? item.createdAt) }}</div>
       </div>
     </NuxtLink>
   </div>
 
-  <Buttons text="最新情報一覧へ" marginClass="is-xxs-top is-right" addClass="" />
 </template>

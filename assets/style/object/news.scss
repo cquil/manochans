@@ -1,6 +1,26 @@
 
 @use "../foundation/" as *;
 
+.p-news.is-home {
+  .p-news__item {
+    display: none;
+
+    &:nth-child(-n+2) {
+      display: block;
+    }
+
+    .p-news__image {
+      border-radius: 32px 0;
+      overflow: hidden;
+      box-shadow: 10px 10px 10px rgba($color-black, .1);
+      @include breakpoint(950, down) {
+        border-radius: 24px 0;
+      }
+    }
+
+  }
+}
+
 .p-news {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,5 +61,10 @@
     font-size: 12px;
     text-align: right;
     @include webfont();
+  }
+
+  &.is-archive {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(256px , 1fr));
   }
 }

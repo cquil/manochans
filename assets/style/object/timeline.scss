@@ -1,0 +1,67 @@
+
+@use "../foundation/" as *;
+
+.p-timeline{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 24px;
+  @include breakpoint(950, down) {
+  }
+  @include breakpoint(750, down) {
+  }
+}
+.p-timeline__item{
+  width: calc(50% - 12px);
+  @include breakpoint(950, down) {
+    width: 100%;
+  }
+  &:not(:first-child){
+    @include breakpoint(750, down) {
+      margin-top: 32px;
+    }
+  }
+  &:nth-child(even) {
+    margin-top: 80px;
+    @include breakpoint(750, down) {
+      margin-top: 32px;
+    }
+  }
+}
+.p-timeline__item-inner{
+  width: 100%;
+}
+.p-timeline__item-head{
+}
+.p-timeline__item-year{
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.p-timeline__item-title{
+  font-weight: 700;
+  font-size: 16px;
+}
+.p-timeline__item-text{
+  font-size: 16px;
+}
+.p-timeline__item-movie{
+  margin-top: 6px;
+}
+.p-timeline__item-link{
+  display: block;
+  width: 100%;
+  position: relative;
+  box-shadow: 10px 10px 10px rgba($color-black, .1);
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    display: block;
+    padding-top: calc(9 / 16 * 100%);
+  }
+  iframe , img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+}

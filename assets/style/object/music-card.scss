@@ -1,7 +1,22 @@
 
 @use "../foundation/" as *;
 
-@use "../foundation/" as *;
+.p-music-card.is-home {
+  .p-music-card__item {
+    display: none;
+
+    &:nth-child(-n+2) {
+      display: block;
+    }
+
+    .p-music-card__image {
+      border-radius: 32px 0;
+      overflow: hidden;
+      box-shadow: 10px 10px 10px rgba($color-black, .1);
+    }
+
+  }
+}
 
 .p-music-card {
   display: grid;

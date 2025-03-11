@@ -6,15 +6,21 @@
       text-align: left;
       padding: 8px 12px;
       font-size: 16px;
+      @include breakpoint(950, down) {
+        padding: 8px 8px;
+        font-size: 14px;
+      }
     }
     th {
       width: 120px;
+      @include breakpoint(950, down) {
+        width: 100px;
+      }
       small {
         display: block;
       }
     }
     td {
-      // background-color: rgba($color-white , .8);
     }
   }
 }

@@ -1,0 +1,31 @@
+@use "../foundation/" as *;
+
+
+.p-enter-view {
+  width: 100cqw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: $color-background-02;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.p-enter-view.is-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.p-enter-view.is-already {
+  display: none;
+}
+
+.p-enter-view__text {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.p-enter-view__text.is-active {
+  opacity: 1;
+}
+

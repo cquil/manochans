@@ -8,34 +8,35 @@
 }
 
 .c-heading {
-  // h1
-  &.is-xlg {
-    font-size: 32px;
-    @include webfont();
+  font-size: 28px;
+  @include webfont();
+  position: relative;
+  padding: 0 64px;
+  display: inline-block;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 54px;
+    height: 34px;
+    @include breakpoint(750, down) {
+      width: 40px;
+      height: 26px;
+    }
   }
-  // h2
-  &.is-lg {
-    font-size: 28px;
-    @include webfont();
+  &::before {
+    left: 0;
+    background: url("../images/icon-wing-left.svg") no-repeat center center / cover;
   }
-  // h3
-  &.is-md {
-    font-size: 24px;
-    @include webfont();
+  &::after {
+    right: 0;
+    background: url("../images/icon-wing-right.svg") no-repeat center center / cover;
   }
-  // h4
-  &.is-sm {
+
+  @include breakpoint(750, down) {
     font-size: 20px;
-    @include webfont();
-  }
-  // h5
-  &.is-xs {
-    font-size: 16px;
-    @include webfont();
-  }
-  // h6
-  &.is-xxs {
-    font-size: 14px;
-    @include webfont();
+    padding: 0 48px;
   }
 }

@@ -7,6 +7,9 @@
   width: 100%;
   z-index: 999;
   padding: 0 64px;
+  @include breakpoint(1200, down) {
+    padding: 0 32px;
+  }
   @include breakpoint(950, down) {
     padding: 0 32px;
     top: 8px;
@@ -51,12 +54,40 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    @include breakpoint(1200, down) {
+      gap: 8px;
+    }
   }
-  &__nav-item {}
   &__nav-item {}
   &__nav-link {
     display: block;
     color: $font-base-color;
     text-decoration: none;
+    position: relative;
+    @include breakpoint(1200, down) {
+      font-size: 14px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: .5s;
+      transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,visibility,box-shadow,transform;
+      width: 100%;
+      height: 2px;
+      background: $font-base-color;
+    }
+    @include hover() {
+      &::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
   }
 }

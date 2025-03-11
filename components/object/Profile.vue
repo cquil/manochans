@@ -8,7 +8,8 @@
   <div class="p-profile">
 
 
-    <div class="p-profile__item">
+    <div class="p-profile__item" data-aos="custom-up" data-aos-duration="600">
+      <Headings text="プロフィール" marginClass="is-xxs-bottom" />
       <table class="c-table p-profile__item-table">
         <tbody>
           <tr>
@@ -31,7 +32,8 @@
       </table>
     </div>
 
-    <div class="p-profile__item">
+    <div class="p-profile__item" data-aos="custom-up" data-aos-duration="600">
+      <Headings text="タグ" marginClass="is-xxs-bottom" />
       <table class="c-table p-profile__item-table">
         <tbody>
           <tr>

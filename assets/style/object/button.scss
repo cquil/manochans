@@ -3,7 +3,38 @@
 .c-button {
   display: inline-block;
   text-decoration: none;
-  padding: 24px 32px;
-  background: #ccc;
-
+  padding: 14px 32px;
+  background:$color-white;
+  color: $color-black;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: .3s;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,visibility,box-shadow,transform;
+    width: 100%;
+    height: 100%;
+    background: $font-base-color;
+    z-index: -1;
+  }
+  @include hover() {
+    color: $color-white;
+    opacity: 1;
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
 }
