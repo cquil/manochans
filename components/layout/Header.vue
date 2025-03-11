@@ -1,5 +1,17 @@
-
 <script setup lang="ts">
+import { useRoute } from 'vue-router';
+const route = useRoute();
+const isTopPage = computed(() => route.path === "/");
+
+const navItems = [
+  { id: "profile", href: "profile", label: "プロフィール" },
+  { id: "news", href: "news", label: "最新情報" },
+  { id: "cute", href: "cute", label: "ここ好き！" },
+  { id: "member", href: "member", label: "メンバーシップ限定" },
+  { id: "music", href: "music", label: "コラボ" },
+  { id: "history", href: "history", label: "タイムライン" },
+];
+
 function anchorTo(event: Event) {
   event.preventDefault();
 
@@ -29,12 +41,16 @@ function anchorTo(event: Event) {
     </h1>
     <nav class="l-header__nav">
       <ul class="l-header__nav-list">
-        <li class="l-header__nav-item"><NuxtLink @click="anchorTo" href="#profile" class="l-header__nav-link">プロフィール</NuxtLink></li>
-        <li class="l-header__nav-item"><NuxtLink @click="anchorTo" href="#news" class="l-header__nav-link">最新情報</NuxtLink></li>
-        <li class="l-header__nav-item"><NuxtLink @click="anchorTo" href="#cute" class="l-header__nav-link">ここ好き！</NuxtLink></li>
-        <li class="l-header__nav-item"><NuxtLink @click="anchorTo" href="#member" class="l-header__nav-link">メンバーシップ限定</NuxtLink></li>
-        <li class="l-header__nav-item"><NuxtLink @click="anchorTo" href="#music" class="l-header__nav-link">コラボ</NuxtLink></li>
-        <li class="l-header__nav-item"><NuxtLink @click="anchorTo" href="#history" class="l-header__nav-link">タイムライン</NuxtLink></li>
+        <li v-for="item in navItems" :key="item.id" class="l-header__nav-item">
+          <NuxtLink
+            :to="isTopPage ? '' : `/#${item.href}`"
+            :href="`#${item.href}`"
+            @click.prevent="isTopPage ? anchorTo($event) : null"
+            class="l-header__nav-link"
+          >
+            {{ item.label }}
+          </NuxtLink>
+        </li>
       </ul>
     </nav>
   </div>

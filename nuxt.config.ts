@@ -9,19 +9,19 @@ export default defineNuxtConfig({
       title: "まのちゃんず！ | 魔ノむえる非公式ファンサイト",
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'サイト説明文を書いて' },
-        { name: 'keywords', content: 'Mano Muelle, 魔ノむえる, VTuber, 歌枠, Vocal Performances, まの, VTuber 歌, Live Songs' },
+        { name: 'description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンコミュニティサイト。' },
+        { name: 'keywords', content: '魔ノむえる, まの、むえる、VTuber, 歌枠, vtuber 歌' },
         { name: 'author', content: 'Mano Muelle Fansite Team CQ' },
 
         { property: 'og:title', content: 'まのちゃんず！ | 魔ノむえる非公式ファンサイト' },
-        { property: 'og:description', content: '魔ノむえるの歌枠セトリを1曲ずつ鑑賞できるファンサイト。Discover every song from Mano Muelle\'s vocal performances.' },
+        { property: 'og:description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンコミュニティサイト。' },
         { property: 'og:image', content: 'siteURL' },
         { property: 'og:url', content: 'siteURL' },
         { property: 'og:type', content: 'website' },
 
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'まのちゃんず！ | 魔ノむえる非公式ファンサイト' },
-        { name: 'twitter:description', content: 'サイト説明文' },
+        { name: 'twitter:description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンコミュニティサイト。' },
         { name: 'twitter:image', content: 'siteURL/ogp.jpg' },
       ],
       link: [

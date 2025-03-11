@@ -1,6 +1,10 @@
 
 <script setup lang="ts">
 
+defineNuxtComponent({
+  ssr: false
+});
+
 import type { MicroCMSImage} from 'microcms-js-sdk';
 
 type Timeline = {
@@ -9,7 +13,7 @@ type Timeline = {
   day: string;
   title: string;
   text: string;
-  viewThumbnail: "画像" | "iframe";
+  viewThumbsnail: "画像" | "iframe";
   imageThumbsnail: MicroCMSImage;
   iframeThumbsnail: string;
 };
@@ -31,20 +35,17 @@ const { data } = await useMicroCMSGetList<Timeline>({
       data-aos-duration="600">
       <div class="p-timeline__item-inner">
         <div class="p-timeline__item-head">
-          <div class="p-timeline__item-year">{{ item.day }}</div>
+          <div class="p-timeline__item-year">{{ dateFormat(item.day) }}</div>
           <div class="p-timeline__item-title">{{ item.title }}</div>
           <div class="p-timeline__item-text">{{ item.text }}</div>
         </div>
         <div class="p-timeline__item-movie">
-          <NuxtLink
-            :to="`${item.url}`"
-            class="p-timeline__item-link"
-          >
-            <template v-if="item.viewThumbnail = '画像'">
+          <NuxtLink :to="item.url" class="p-timeline__item-link">
+            <template v-if="item.viewThumbsnail === '画像'">
               <img :src="item.imageThumbsnail.url">
             </template>
-            <template v-else-if="item.viewThumbnail = 'iframe'">
-              <div v-html="item.iframeThumbsnail"></div>
+            <template v-else>
+              <img :src="'https://img.youtube.com/vi/' + item.iframeThumbsnail + '/maxresdefault.jpg'" />
             </template>
           </NuxtLink>
         </div>
