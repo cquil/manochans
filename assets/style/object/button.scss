@@ -37,4 +37,8 @@
       transform-origin: left;
     }
   }
+
+  &.is-xs {
+    padding: 8px 24px;
+  }
 }

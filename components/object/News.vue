@@ -10,7 +10,6 @@ defineNuxtComponent({
 
 defineProps({
   addClass: String,
-  
 });
 
 import type { MicroCMSImage} from 'microcms-js-sdk';

@@ -34,9 +34,10 @@
 
   &__logo {
     margin: 0;
-    width: 64px;
+    width: 222px;
     @include breakpoint(950, down) {
-      width: 32px;
+      width: 166px;
+      margin: auto;
     }
     a , img {
       display: block;
