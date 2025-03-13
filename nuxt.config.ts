@@ -53,7 +53,7 @@ export default defineNuxtConfig({
   microCMS: {
     serviceDomain: 'manochans',
     apiKey: 'ZcQJV7DcuwfsgLx22aVAWJbR3CNo9fdhoPDk',
-    target: 'server'
+    target: 'all'
   },
 
   css: [
