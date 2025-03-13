@@ -1,9 +1,6 @@
 
 <script setup lang="ts">
 
-defineNuxtComponent({
-  ssr: false
-});
 
 defineProps({
   addClass: String,

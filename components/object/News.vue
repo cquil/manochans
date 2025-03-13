@@ -1,12 +1,5 @@
 
-
-
-
 <script setup lang="ts">
-
-defineNuxtComponent({
-  ssr: false
-});
 
 defineProps({
   addClass: String,
@@ -30,6 +23,7 @@ const { data } = await useMicroCMSGetList<News>({
 <template>
 
   <div :class="['p-news', addClass]">
+
     <template v-for="item in data?.contents" :key="item.id">
       <NuxtLink
         v-if="item.url"
@@ -58,6 +52,11 @@ const { data } = await useMicroCMSGetList<News>({
         </div>
       </div>
     </template>
+
   </div>
 
 </template>
+
+
+
+

@@ -1,9 +1,6 @@
 
 <script setup lang="ts">
 
-defineNuxtComponent({
-  ssr: false
-});
 
 import type { MicroCMSImage} from 'microcms-js-sdk';
 
