@@ -47,14 +47,13 @@ export default defineNuxtConfig({
     },
   ],
 
-  ssr: true,
-
   modules: ["@nuxt/image", 'nuxt-aos' , 'nuxt-microcms-module'],
 
   // microCMS
   microCMS: {
     serviceDomain: 'manochans',
     apiKey: 'ZcQJV7DcuwfsgLx22aVAWJbR3CNo9fdhoPDk',
+    target: 'server'
   },
 
   css: [
