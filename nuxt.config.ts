@@ -47,6 +47,8 @@ export default defineNuxtConfig({
     },
   ],
 
+  ssr: true,
+
   modules: ["@nuxt/image", 'nuxt-aos' , 'nuxt-microcms-module'],
 
   // microCMS

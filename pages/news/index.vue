@@ -5,8 +5,6 @@ definePageMeta({
   layout: "base",
 });
 
-
-
 </script>
 
 <template>
