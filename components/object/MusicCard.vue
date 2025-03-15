@@ -4,26 +4,32 @@
 
 defineProps({
   addClass: String,
+  limit: Number,
 });
 
-import type { MicroCMSImage} from 'microcms-js-sdk';
+// import type { MicroCMSImage} from 'microcms-js-sdk';
 
-type Collabo = {
-  id: string;
-  title: string;
-  thumbnails: MicroCMSImage;
-  url: string;
-};
+// type Collabo = {
+//   id: string;
+//   title: string;
+//   thumbnails: MicroCMSImage;
+//   url: string;
+// };
 
-const { data } = await useMicroCMSGetList<Collabo>({
-  endpoint: "collab",
-});
+// const { data } = await useMicroCMSGetList<Collabo>({
+//   endpoint: "collab",
+// });
+
+const { data } = await useAsyncData('collabo', () =>
+  $fetch('/api/collabo')
+);
+
 </script>
 
 <template>
   <div :class="['p-music-card', addClass]">
     <NuxtLink
-      v-for="item in data?.contents"
+      v-for="item in data?.contents.slice(0, limit ?? data.contents.length)"
       :key="item.id"
       :to="`${item.url}`"
       class="p-music-card__item"

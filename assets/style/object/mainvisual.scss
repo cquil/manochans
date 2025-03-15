@@ -7,6 +7,7 @@
   top: 136px;
   height: calc(100vh - 136px);
   padding-bottom: 16px;
+  max-height: 816px;
 
   @include breakpoint(950, down) {
     height: 100%;

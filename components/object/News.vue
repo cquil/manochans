@@ -3,20 +3,12 @@
 
 defineProps({
   addClass: String,
+  limit: Number,
 });
 
-import type { MicroCMSImage} from 'microcms-js-sdk';
-
-type News = {
-  id: string;
-  title: string;
-  image: MicroCMSImage;
-  url: string;
-};
-
-const { data } = await useMicroCMSGetList<News>({
-  endpoint: "news",
-});
+const { data } = await useAsyncData('news', () =>
+  $fetch('/api/news')
+);
 
 </script>
 
@@ -24,7 +16,7 @@ const { data } = await useMicroCMSGetList<News>({
 
   <div :class="['p-news', addClass]">
 
-    <template v-for="item in data?.contents" :key="item.id">
+    <template v-for="item in data?.contents.slice(0, limit ?? data.contents.length)" :key="item.id">
       <NuxtLink
         v-if="item.url"
         :to="item.url"

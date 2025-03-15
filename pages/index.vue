@@ -19,7 +19,7 @@ definePageMeta({
         <section class="l-section is-xlg is-top" id="profile"><Profile /></section>
         <section class="l-section is-xlg is-top" id="news">
           <Headings text="最新情報" marginClass="is-xxs-bottom" />
-          <News :addClass="'is-home'" />
+          <News :addClass="'is-home'" :limit="2" />
           <Buttons text="最新情報一覧へ" marginClass="is-xxs-top is-right" addClass="" toLink="/news/"/>
         </section>
         <section class="l-section is-xlg is-top" id="cute">
@@ -32,7 +32,7 @@ definePageMeta({
         </section>
         <section class="l-section is-xlg is-top" id="music">
           <Headings text="コラボ動画" marginClass="is-xxs-bottom"  />
-          <MusicCard :addClass="'is-home'" />
+          <MusicCard :addClass="'is-home'" :limit="2"  />
           <Buttons text="コラボ動画一覧へ" marginClass="is-xxs-top is-right" addClass="" toLink="/collaboration/"/>
         </section>
         <section class="l-section is-xlg is-top" id="history">

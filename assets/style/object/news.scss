@@ -3,12 +3,6 @@
 
 .p-news.is-home {
   .p-news__item {
-    display: none;
-
-    &:nth-child(-n+2) {
-      display: block;
-    }
-
     .p-news__image {
       border-radius: 32px 0;
       overflow: hidden;
