@@ -7,19 +7,6 @@ defineProps({
   limit: Number,
 });
 
-// import type { MicroCMSImage} from 'microcms-js-sdk';
-
-// type Collabo = {
-//   id: string;
-//   title: string;
-//   thumbnails: MicroCMSImage;
-//   url: string;
-// };
-
-// const { data } = await useMicroCMSGetList<Collabo>({
-//   endpoint: "collab",
-// });
-
 const { data } = await useAsyncData('collabo', () =>
   $fetch('/api/collabo')
 );

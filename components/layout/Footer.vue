@@ -7,7 +7,7 @@
     <div class="l-footer__content">
       <div class="l-footer__logo">
         <NuxtLink to="/">
-          <NuxtImg src="images/logo.png" alt="logo" width="150" format="webp"/>
+          <NuxtImg src="images/logo-white.svg" alt="logo" width="237" format="webp"/>
         </NuxtLink>
       </div>
       <ul class="l-footer__list">

@@ -12,6 +12,10 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  @include breakpoint(950, down) {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
   &::after {
     content: "";
     position: absolute;

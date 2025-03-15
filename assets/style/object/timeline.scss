@@ -4,8 +4,9 @@
 .p-timeline{
   display: flex;
   flex-wrap: wrap;
-  gap: 0px 24px;
+  gap: 48px 24px;
   @include breakpoint(950, down) {
+    gap: 32px;
   }
   @include breakpoint(750, down) {
   }
@@ -15,17 +16,17 @@
   @include breakpoint(950, down) {
     width: 100%;
   }
-  &:not(:first-child){
-    @include breakpoint(750, down) {
-      margin-top: 32px;
-    }
-  }
-  &:nth-child(even) {
-    margin-top: 80px;
-    @include breakpoint(750, down) {
-      margin-top: 32px;
-    }
-  }
+  // &:not(:first-child){
+  //   @include breakpoint(750, down) {
+  //     margin-top: 0;
+  //   }
+  // }
+  // &:nth-child(even) {
+  //   margin-top: 80px;
+  //   @include breakpoint(750, down) {
+  //     margin-top: 0;
+  //   }
+  // }
 }
 .p-timeline__item-inner{
   width: 100%;

@@ -1,5 +1,33 @@
 @use "../foundation/" as *;
 
 .p-member {
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+  &__title {
+    margin: 0 0 24px;
+    font-size: 24px;
+    @include webfont();
+    @include breakpoint(950, down) {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
+  &__text {
+    margin: 0;
+    margin-bottom: 24px;
+    @include breakpoint(950, down) {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
 
+    b {
+      @include webfont();
+      font-size: 18px;
+      padding: 4px 0;
+      @include breakpoint(950, down) {
+        font-size: 14px;
+      }
+    }
+  }
 }

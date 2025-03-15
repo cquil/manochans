@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンコミュニティサイト。' },
-        { name: 'keywords', content: '魔ノむえる, まの、むえる、VTuber, 歌枠, vtuber 歌' },
+        { name: 'keywords', content: '魔ノむえる,非公式ファンサイト,まの,むえる,まのむえる,VTuber,歌枠,vtuber,歌' },
         { name: 'author', content: 'Mano Muelle Fansite Team CQ' },
 
         { property: 'og:title', content: 'まのちゃんず！ | 魔ノむえる非公式ファンサイト' },

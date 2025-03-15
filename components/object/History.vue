@@ -17,13 +17,15 @@ type Timeline = {
 
 const { data } = await useMicroCMSGetList<Timeline>({
   endpoint: "timeline",
+  queries: {
+    limit: 100,
+    orders: "publishedAt"
+  }
 });
 </script>
 
 <template>
-
   <div class="p-timeline">
-
     <div
       v-for="item in data?.contents"
       :key="item.id"
@@ -48,8 +50,5 @@ const { data } = await useMicroCMSGetList<Timeline>({
         </div>
       </div>
     </div>
-
-
-
   </div>
 </template>

@@ -21,6 +21,7 @@
   gap: 16px;
   @include breakpoint(750, down) {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
   &__item {
     display: block;

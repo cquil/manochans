@@ -17,7 +17,6 @@
   }
   &__container {
     display: grid;
-    // grid-template-columns: 1fr 1fr;
     grid-template-columns: 835fr 1020fr;
     gap: 64px;
     @include breakpoint(950, down) {

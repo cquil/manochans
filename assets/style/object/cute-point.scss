@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   gap: 64px;
+  @include breakpoint(950, down) {
+    gap: 32px;
+  }
   &__item {
     display: flex;
     gap: 16px;

@@ -68,8 +68,15 @@
     bottom: 24px;
     right: 24px;
     z-index: 999;
+    @include breakpoint(950, down) {
+      right: 16px;
+      bottom: 16px;
+    }
     img {
       animation: move 1.9s ease-in-out infinite alternate-reverse;
+      @include breakpoint(950, down) {
+        width: 64px;
+      }
     }
     &:hover {
       .p-first-view__message {
