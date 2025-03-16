@@ -10,4 +10,8 @@
   @include breakpoint(950, down) {
     padding-inline: 0;
   }
+
+  &.is-sm {
+    max-width: 944px;
+  }
 }

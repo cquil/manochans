@@ -33,22 +33,25 @@ const { data } = await useMicroCMSGetList<Timeline>({
       data-aos="custom-up"
       data-aos-duration="600">
       <div class="p-timeline__item-inner">
-        <div class="p-timeline__item-head">
-          <div class="p-timeline__item-year">{{ dateFormat(item.day) }}</div>
+
+        <div class="p-timeline__item-year">{{ dateFormat(item.day) }}</div>
+        <div class="p-timeline__item-content">
           <div class="p-timeline__item-title">{{ item.title }}</div>
           <div class="p-timeline__item-text">{{ item.text }}</div>
+          <div class="p-timeline__item-movie">
+            <NuxtLink :to="item.url" class="p-timeline__item-link">
+              <template v-if="item.viewThumbsnail === '画像'">
+                <img :src="item.imageThumbsnail.url">
+              </template>
+              <template v-else>
+                <img :src="'https://img.youtube.com/vi/' + item.iframeThumbsnail + '/maxresdefault.jpg'" />
+              </template>
+            </NuxtLink>
+          </div>
         </div>
-        <div class="p-timeline__item-movie">
-          <NuxtLink :to="item.url" class="p-timeline__item-link">
-            <template v-if="item.viewThumbsnail === '画像'">
-              <img :src="item.imageThumbsnail.url">
-            </template>
-            <template v-else>
-              <img :src="'https://img.youtube.com/vi/' + item.iframeThumbsnail + '/maxresdefault.jpg'" />
-            </template>
-          </NuxtLink>
-        </div>
+
       </div>
+      
     </div>
   </div>
 </template>

@@ -13,7 +13,7 @@ definePageMeta({
   <div class="l-one-column">
 
     <section class="l-section">
-      <PageHeader pageTitle="collaboration" />
+      <PageHeader pageTitle="Collaboration" />
     </section>
 
     <section class="l-section">

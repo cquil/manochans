@@ -9,25 +9,26 @@ export default defineNuxtConfig({
       title: "まのちゃんず！ | 魔ノむえる非公式ファンサイト",
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンコミュニティサイト。' },
+        { name: 'description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンサイト。' },
         { name: 'keywords', content: '魔ノむえる,非公式ファンサイト,まの,むえる,まのむえる,VTuber,歌枠,vtuber,歌' },
         { name: 'author', content: 'Mano Muelle Fansite Team CQ' },
 
         { property: 'og:title', content: 'まのちゃんず！ | 魔ノむえる非公式ファンサイト' },
-        { property: 'og:description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンコミュニティサイト。' },
-        { property: 'og:image', content: 'siteURL' },
-        { property: 'og:url', content: 'siteURL' },
+        { property: 'og:description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンサイト。' },
+        { property: 'og:image', content: 'https://manochans.com/ogp.png' },
+        { property: 'og:url', content: 'https://manochans.com' },
         { property: 'og:type', content: 'website' },
 
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'まのちゃんず！ | 魔ノむえる非公式ファンサイト' },
-        { name: 'twitter:description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンコミュニティサイト。' },
-        { name: 'twitter:image', content: 'siteURL/ogp.jpg' },
+        { name: 'twitter:description', content: '「まのちゃんず！」は、VTuber「魔ノむえる」の非公式ファンサイトです。最新の配信情報、コラボ情報などをまとめ、まのちゃんの魅力をたっぷりお届け！彼女の歌や活動をもっと楽しみたい人のためのファンサイト。' },
+        { name: 'twitter:image', content: 'https://manochans.com/ogp.png' },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap' }
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap' },
+        { rel: 'icon', href: '/favicon.ico' }
       ]
     },
   },

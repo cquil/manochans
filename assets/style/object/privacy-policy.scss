@@ -1,0 +1,24 @@
+
+@use "../foundation/" as *;
+
+.p-privacy-policy {
+  &__block {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 , p , ul {
+      margin: 0;
+    }
+    h2 {
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+
+    ul li{
+      list-style-type: disc;
+      margin-left: 1em;
+    }
+  }
+}

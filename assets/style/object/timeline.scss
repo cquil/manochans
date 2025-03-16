@@ -2,40 +2,33 @@
 @use "../foundation/" as *;
 
 .p-timeline{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px , 1fr));
+  gap: 12px 24px;
+  overflow: hidden;
   @include breakpoint(950, down) {
-    gap: 32px;
+    gap: 12px;
   }
   @include breakpoint(750, down) {
+    grid-template-columns: 1fr;
   }
 }
-.p-timeline__item{
-  width: calc(50% - 12px);
-  @include breakpoint(950, down) {
-    width: 100%;
-  }
-  // &:not(:first-child){
-  //   @include breakpoint(750, down) {
-  //     margin-top: 0;
-  //   }
-  // }
-  // &:nth-child(even) {
-  //   margin-top: 80px;
-  //   @include breakpoint(750, down) {
-  //     margin-top: 0;
-  //   }
-  // }
+.p-timeline__item {
+  display: block;
 }
 .p-timeline__item-inner{
   width: 100%;
+  padding-bottom: 20px;
 }
-.p-timeline__item-head{
-}
+
 .p-timeline__item-year{
   font-size: 14px;
   margin-bottom: 6px;
+}
+.p-timeline__item-content{
+  padding-left: 24px;
+  border-left: 2px solid $font-base-color;
+  position: relative;
 }
 .p-timeline__item-title{
   font-weight: 700;

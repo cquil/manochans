@@ -15,7 +15,7 @@
           <NuxtLink to="privacy-policy" class="l-footer__link">Privacy Policy</NuxtLink>
         </li>
         <li class="l-footer__item">
-          <NuxtLink to="#" class="l-footer__link">Terms of Service</NuxtLink>
+          <NuxtLink to="terms" class="l-footer__link">Terms of Service</NuxtLink>
         </li>
       </ul>
     </div>
