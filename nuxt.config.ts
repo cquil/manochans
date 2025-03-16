@@ -52,8 +52,8 @@ export default defineNuxtConfig({
 
   // microCMS
   microCMS: {
-    serviceDomain: 'manochans',
-    apiKey: 'ZcQJV7DcuwfsgLx22aVAWJbR3CNo9fdhoPDk',
+    serviceDomain: process.env.microCMS_Dmain,
+    apiKey: process.env.microCMS_API_key,
     target: 'all'
   },
 

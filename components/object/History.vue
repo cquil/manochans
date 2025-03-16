@@ -1,27 +1,9 @@
 
 <script setup lang="ts">
 
-
-import type { MicroCMSImage} from 'microcms-js-sdk';
-
-type Timeline = {
-  id: string;
-  url: string;
-  day: string;
-  title: string;
-  text: string;
-  viewThumbsnail: "画像" | "iframe";
-  imageThumbsnail: MicroCMSImage;
-  iframeThumbsnail: string;
-};
-
-const { data } = await useMicroCMSGetList<Timeline>({
-  endpoint: "timeline",
-  queries: {
-    limit: 100,
-    orders: "publishedAt"
-  }
-});
+const { data } = await useAsyncData('timeline', () =>
+  $fetch('/api/timeline')
+);
 </script>
 
 <template>
@@ -51,7 +33,7 @@ const { data } = await useMicroCMSGetList<Timeline>({
         </div>
 
       </div>
-      
+
     </div>
   </div>
 </template>
