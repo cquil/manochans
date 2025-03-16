@@ -48,7 +48,11 @@ export default defineNuxtConfig({
     },
   ],
 
-  modules: ["@nuxt/image", 'nuxt-aos' , 'nuxt-microcms-module'],
+  modules: ["@nuxt/image", 'nuxt-aos', 'nuxt-microcms-module', 'nuxt-gtag'],
+
+  gtag: {
+    id: 'G-3FJ4HBDDDV'
+  },
 
   // microCMS
   microCMS: {

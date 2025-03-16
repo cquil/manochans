@@ -2,6 +2,7 @@
 
 .p-first-view {
   height: calc(100cqh - 136px);
+  max-height: 816px;
   @include breakpoint(950, down) {
     height: auto;
     padding-bottom: 64px;
