@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     },
   ],
 
-  modules: ["@nuxt/image", '@zadigetvoltaire/nuxt-gtm', 'nuxt-aos', 'nuxt-microcms-module' , "@vercel/speed-insights/nuxt"],
+  modules: ['@nuxt/image', 'nuxt-aos', 'nuxt-microcms-module' , '@zadigetvoltaire/nuxt-gtm'],
 
   gtm: {
     id: 'GTM-NKWPK4TH',
