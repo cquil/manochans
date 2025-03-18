@@ -3,7 +3,7 @@
 
 .p-timeline:has(.p-timeline__item:nth-child(even):last-child){
     padding-bottom:120px;
-    @include breakpoint(950, down) {padding-bottom: 0;}
+    @include breakpoint(1300, down) {padding-bottom: 0;}
 }
 
 .p-timeline{
@@ -11,11 +11,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 48px 32px;
   overflow: hidden;
-  @include breakpoint(950, down) {
+  @include breakpoint(1300, down) {
+    grid-template-columns: 1fr;
     gap: 48px 32px;
   }
   @include breakpoint(750, down) {
-    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }
 .p-timeline__item {
@@ -23,7 +24,7 @@
   &:nth-child(even) {
     position: relative;
     top: 120px;
-    @include breakpoint(950, down) {
+    @include breakpoint(1300, down) {
       top: inherit;
     }
   }
