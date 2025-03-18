@@ -9,13 +9,12 @@
         <div class="p-first-view__label is-bottom">非公式ファンサイト</div>
       </div>
 
-      <div class="p-first-view__float" data-aos="custom-fade">
+      <NuxtLink target="_blank" rel="noopener" to="https://www.youtube.com/@manomueru" class="p-first-view__float" data-aos="custom-fade">
         <img src="@/assets/images/icon-mv-float.svg" alt="あくまねこのイラスト" />
         <div class="p-first-view__message">
-          <NuxtLink target="_blank" rel="noopener" to="https://www.youtube.com/@manomueru" class="p-first-view__message-text">Youtube<br>チャンネルはこちら</NuxtLink>
+          <div class="p-first-view__message-text">Youtubeへ</div>
         </div>
-      </div>
-      
+      </NuxtLink>
     </div>
   </div>
 </template>
