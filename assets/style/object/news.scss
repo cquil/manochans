@@ -8,10 +8,15 @@
     grid-template-columns: 1fr;
     gap: 32px;
   }
+  a {
+    .p-news__image {
+      box-shadow: 10px 10px 10px rgba($color-black, .1);
+    }
+  }
   .p-news__image {
     border-radius: 32px 0;
     overflow: hidden;
-    box-shadow: 10px 10px 10px rgba($color-black, .1);
+    // box-shadow: 10px 10px 10px rgba($color-black, .1);
     @include breakpoint(950, down) {
       border-radius: 24px 0;
     }
