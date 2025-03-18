@@ -4,6 +4,10 @@
 .p-music-card.is-home {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  @include breakpoint(750, down) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
   .p-music-card__image {
     border-radius: 32px 0;
     overflow: hidden;
