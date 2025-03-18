@@ -30,8 +30,10 @@ definePageMeta({
             <h2>1. 個人情報の取得について</h2>
             <p>
               当サイトでは、訪問者の同意を得た上で、以下のような方法で個人情報を取得する場合があります。
-              <br>- アクセス解析ツールによるアクセスデータの取得
             </p>
+            <ul>
+                <li>アクセス解析ツールによるアクセスデータの取得</li>
+              </ul>
           </div>
 
           <div class="p-privacy-policy__block">
@@ -52,8 +54,8 @@ definePageMeta({
           <div class="p-privacy-policy__block">
             <h2>4. アクセス解析ツールについて</h2>
             <p>
-              当サイトでは、Google Analyticsを利用しています。Google Analyticsは、訪問者のトラフィックデータを収集するためにCookieを使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。
-              <br>Google Analyticsの利用に関する詳細は、[Googleのポリシーと規約](https://policies.google.com/)をご参照ください。
+              当サイトでは、Google Analyticsを利用しています。Google Analyticsは、訪問者のトラフィックデータを収集するためにCookieを使用しています。<br>このトラフィックデータは匿名で収集されており、個人を特定するものではありません。
+              <br>Google Analyticsの利用に関する詳細は、[<a href="https://policies.google.com/">Googleのポリシーと規約</a>]をご参照ください。
             </p>
           </div>
           <div class="p-privacy-policy__block">
