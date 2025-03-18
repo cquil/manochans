@@ -4,6 +4,7 @@
 <template>
 <footer class="l-footer">
   <div class="l-container">
+
     <div class="l-footer__content">
       <div class="l-footer__logo">
         <NuxtLink to="/">
@@ -23,6 +24,7 @@
       </ul>
     </div>
     <NuxtLink class="l-footer__copyright" to="https://x.com/CqSite">管理者: cq</NuxtLink>
+    
   </div>
 </footer>
 </template>

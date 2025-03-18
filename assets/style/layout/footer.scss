@@ -4,7 +4,7 @@
   margin-top: 64px;
   padding: 64px 0;
   background: rgba($color-black , .8);
-  @include breakpoint(750,  down) {
+  @include breakpoint(950,  down) {
     margin-top: 32px;
     padding: 32px 0;
   }
@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    @include breakpoint(750, down) {
+    @include breakpoint(950, down) {
       flex-direction: column;
     }
   }
@@ -24,9 +24,9 @@
     align-items: center;
     margin-left: auto;
     gap: 16px;
-    @include breakpoint(750, down) {
+    @include breakpoint(950, down) {
       margin-left: 0;
-      margin-top: 16px;
+      gap: 8px;
       flex-direction: column;
     }
   }
@@ -43,7 +43,7 @@
     color: $color-white;
     margin-top: 24px;
     text-align: right;
-    @include breakpoint(750, down) {
+    @include breakpoint(950, down) {
       text-align: center;
       margin-top: 32px;
     }
