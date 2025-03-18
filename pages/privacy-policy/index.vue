@@ -55,7 +55,7 @@ definePageMeta({
             <h2>4. アクセス解析ツールについて</h2>
             <p>
               当サイトでは、Google Analyticsを利用しています。Google Analyticsは、訪問者のトラフィックデータを収集するためにCookieを使用しています。<br>このトラフィックデータは匿名で収集されており、個人を特定するものではありません。
-              <br>Google Analyticsの利用に関する詳細は、[<a href="https://policies.google.com/">Googleのポリシーと規約</a>]をご参照ください。
+              <br>Google Analyticsの利用に関する詳細は、[<a href="https://policies.google.com/" target="_blank">Googleのポリシーと規約</a>]をご参照ください。
             </p>
           </div>
           <div class="p-privacy-policy__block">
