@@ -15,9 +15,7 @@ definePageMeta({
     </section>
 
     <section class="l-section">
-      <div class="l-container">
-        <News :addClass="'is-archive'"/>
-      </div>
+      <News />
     </section>
 
   </div>

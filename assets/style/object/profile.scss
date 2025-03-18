@@ -29,4 +29,17 @@
   &__item-table {
     width: 100%;
   }
+
+  &__item-buttons {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    @include breakpoint(950, down) {
+      gap: 8px;
+    }
+  }
+  &__item-button {
+    text-align: center;
+  }
 }

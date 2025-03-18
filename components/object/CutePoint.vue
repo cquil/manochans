@@ -41,7 +41,7 @@ const points = ([
   <div class="p-cute-point">
     <div class="p-cute-point__item"  v-for="(point, index) in points" :key="index">
       <div class="p-cute-point__item-image">
-        <img :src="point.image" />
+        <img :src="point.image" alt="魔ノむえる画像" />
       </div>
       <div class="p-cute-point__item-content">
         <h3 class="p-cute-point__item-title">{{ point.title }}</h3>

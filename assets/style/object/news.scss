@@ -2,23 +2,22 @@
 @use "../foundation/" as *;
 
 .p-news.is-home {
-  .p-news__item {
-    .p-news__image {
-      border-radius: 32px 0;
-      overflow: hidden;
-      box-shadow: 10px 10px 10px rgba($color-black, .1);
-      @include breakpoint(950, down) {
-        border-radius: 24px 0;
-      }
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  .p-news__image {
+    border-radius: 32px 0;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba($color-black, .1);
+    @include breakpoint(950, down) {
+      border-radius: 24px 0;
     }
-
   }
 }
 
 .p-news {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(356px , 1fr));
+  gap: 32px 16px;
   @include breakpoint(750, down) {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -35,9 +34,14 @@
     overflow: hidden;
     img {
       transition: .3s;
+      @include img-option;
+      aspect-ratio: 324 / 182;
       @include group-hover() {
         transform: scale(1.05);
       };
+      @include breakpoint(950, down) {
+        aspect-ratio: 16 / 9;
+      }
     }
   }
   &__content {
@@ -56,10 +60,5 @@
     font-size: 12px;
     text-align: right;
     @include webfont();
-  }
-
-  &.is-archive {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(256px , 1fr));
   }
 }

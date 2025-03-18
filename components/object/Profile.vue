@@ -62,6 +62,10 @@
           </tr>
         </tbody>
       </table>
+      <div class="p-profile__item-buttons">
+        <NuxtLink to="https://www.youtube.com/channel/UCFqVAFANOHm17UVy8sWkhqw" target="_blank" class="c-button p-profile__item-button">Youtube</NuxtLink>
+        <NuxtLink to="https://x.com/Mano_muerU/" target="_blank" class="c-button p-profile__item-button">X</NuxtLink>
+      </div>
     </div>
 
 

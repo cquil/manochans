@@ -7,10 +7,13 @@
     <div class="l-footer__content">
       <div class="l-footer__logo">
         <NuxtLink to="/">
-          <NuxtImg src="images/logo-white.svg" alt="logo" width="237" format="webp"/>
+          <NuxtImg src="images/logo-white.svg" alt="まのちゃんず！｜ 魔ノむえる非公式ファンサイト" width="237" format="webp"/>
         </NuxtLink>
       </div>
       <ul class="l-footer__list">
+        <li class="l-footer__item">
+          <NuxtLink to="https://mano-singing.vercel.app/" class="l-footer__link" target="_blank">歌枠アーカイブサイト</NuxtLink>
+        </li>
         <li class="l-footer__item">
           <NuxtLink to="privacy-policy" class="l-footer__link">Privacy Policy</NuxtLink>
         </li>

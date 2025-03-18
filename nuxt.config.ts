@@ -6,6 +6,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs:{
+        lang: 'ja'
+      },
       title: "まのちゃんず！ | 魔ノむえる非公式ファンサイト",
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

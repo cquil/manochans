@@ -76,7 +76,7 @@
     img {
       animation: move 1.9s ease-in-out infinite alternate-reverse;
       @include breakpoint(950, down) {
-        width: 64px;
+        width: 56px;
       }
     }
     &:hover {
@@ -97,6 +97,9 @@
     transition: .3s;
     opacity: 0;
     transform: translateY(3px);
+    @include breakpoint(950, down) {
+      display: none;
+    }
 
     &::after {
       content: "";

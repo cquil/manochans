@@ -5,6 +5,10 @@ export default defineEventHandler(async (event) => {
   try {
     const data = await microcmsClient.get({
       endpoint: 'timeline', // microCMS のエンドポイント名
+      queries: {
+        limit: 100,
+        orders: "publishedAt"
+      },
     });
 
     return data; // 取得したデータをそのまま返す

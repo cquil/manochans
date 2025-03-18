@@ -2,6 +2,7 @@
 @use "../foundation/" as *;
 
 .p-banner {
+  display: block;
   &__image {
     display: block;
     img {
