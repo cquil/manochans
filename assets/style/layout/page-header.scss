@@ -4,7 +4,7 @@
 .l-page-header {
 
   &__container {
-    padding: 32px 32px;
+    padding: 32px 0px;
     @include breakpoint(950, down) {
       padding: 0px 0px 24px;
     }

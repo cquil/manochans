@@ -6,9 +6,9 @@ const isTopPage = computed(() => route.path === "/");
 const navItems = [
   { id: "profile", href: "profile", label: "プロフィール" },
   { id: "news", href: "news", label: "最新情報" },
-  { id: "cute", href: "cute", label: "ここ好き！" },
+  { id: "cute", href: "cute", label: "魅力ポイント" },
   { id: "member", href: "member", label: "メンバーシップ限定" },
-  { id: "music", href: "music", label: "コラボ" },
+  { id: "music", href: "music", label: "コラボ動画" },
   { id: "history", href: "history", label: "タイムライン" },
 ];
 
@@ -36,7 +36,7 @@ function anchorTo(event: Event) {
   <div class="l-header__container">
     <h1 class="l-header__logo">
       <NuxtLink to="/">
-        <NuxtImg src="images/logo.svg" alt="logo" width="444" format="webp"/>
+        <NuxtImg src="images/logo.svg" alt="まのちゃんず！｜ 魔ノむえる非公式ファンサイト" width="444" format="webp"/>
       </NuxtLink>
     </h1>
     <nav class="l-header__nav">

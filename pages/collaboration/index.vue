@@ -17,9 +17,8 @@ definePageMeta({
     </section>
 
     <section class="l-section">
-      <div class="l-container">
-        <MusicCard :addClass="'is-archive'"/>
-      </div>
+      
+      <MusicCard />
     </section>
 
   </div>
