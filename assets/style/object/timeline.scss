@@ -8,11 +8,11 @@
 
 .p-timeline{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px , 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 48px 32px;
   overflow: hidden;
   @include breakpoint(950, down) {
-    gap: 24px;
+    gap: 48px 32px;
   }
   @include breakpoint(750, down) {
     grid-template-columns: 1fr;
