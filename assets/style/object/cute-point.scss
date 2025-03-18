@@ -45,7 +45,7 @@
     font-size: 24px;
     margin: 0;
     @include webfont();
-    font-weight: 400;
+    font-weight: 500;
     @include breakpoint(950, down) {
       font-size: 20px;
     }
