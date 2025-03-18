@@ -45,8 +45,9 @@
     font-size: 24px;
     margin: 0;
     @include webfont();
+    font-weight: 400;
     @include breakpoint(950, down) {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
   &__item-text {

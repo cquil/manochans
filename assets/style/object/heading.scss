@@ -10,6 +10,7 @@
 .c-heading {
   font-size: 28px;
   @include webfont();
+  font-weight: 400;
   position: relative;
   padding: 0 64px;
   display: inline-block;
