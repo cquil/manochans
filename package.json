@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/kaisei-decol": "^5.1.1",
     "@nuxt/image": "^1.9.0",
+    "@nuxtjs/sitemap": "^7.2.9",
     "@vercel/speed-insights": "^1.2.0",
     "dayjs": "^1.11.13",
     "nuxt": "^3.15.4",

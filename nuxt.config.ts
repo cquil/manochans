@@ -52,7 +52,17 @@ export default defineNuxtConfig({
     },
   ],
 
-  modules: ["@nuxt/image", '@zadigetvoltaire/nuxt-gtm', 'nuxt-aos', 'nuxt-microcms-module'],
+  modules: ["@nuxt/image", '@zadigetvoltaire/nuxt-gtm', 'nuxt-aos', 'nuxt-microcms-module' , '@nuxtjs/sitemap'],
+
+  sitemap: {
+    hostname: 'https://manochans.com',
+    gzip: true,
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date()
+    }
+  },
 
   gtm: {
     id: 'GTM-NKWPK4TH',
