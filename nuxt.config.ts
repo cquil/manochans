@@ -73,7 +73,7 @@ export default defineNuxtConfig({
   microCMS: {
     serviceDomain: process.env.microCMS_Dmain,
     apiKey: process.env.microCMS_API_key,
-    target: 'all'
+    target: 'server'
   },
 
   css: [
