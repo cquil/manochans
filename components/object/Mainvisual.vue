@@ -20,6 +20,7 @@ const swiperOptions = {
 
 <template>
   <div class="p-main-visual">
+    
     <div class="p-main-visual__container">
 
       <div class="p-main-visual__images" data-aos="custom-fade" data-aos-delay="200" data-aos-duration="600">
@@ -47,5 +48,6 @@ const swiperOptions = {
       </div>
 
     </div>
+    <Floatbanner />
   </div>
 </template>

@@ -8,6 +8,7 @@
   height: calc(100vh - 136px);
   padding-bottom: 16px;
   max-height: 816px;
+  max-height: inherit;
 
   @include breakpoint(950, down) {
     height: 100%;

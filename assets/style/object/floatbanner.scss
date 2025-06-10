@@ -1,0 +1,38 @@
+
+@use "../foundation/" as *;
+
+.p-float-banner {
+  position: absolute;
+  bottom: 16px;
+  left: -16px;
+  margin: auto;
+  z-index: 99;
+  @include breakpoint(1200, down) {
+    left: -8px;
+    bottom: 8px;
+  }
+  @include breakpoint(950, down) {
+    display: none;
+  }
+
+
+  &__item {
+    max-width: 196px;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 16px 0 16px 0;
+
+    img {
+      aspect-ratio: 295 / 140;
+      transition: .3s;
+    }
+
+    @include hover() {
+      opacity: 1;
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

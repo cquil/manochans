@@ -12,6 +12,7 @@ definePageMeta({
     <div class="l-two-column__container">
       <div class="l-two-column__main">
         <Mainvisual />
+        
       </div>
       <div class="l-two-column__contents">
         <section class="l-section"><FirstView /></section>
