@@ -41,9 +41,9 @@ const swiperOptions = {
             v-bind="swiperOptions"
             :modules="[EffectFade, Autoplay]"
           >
-            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-03.jpg" alt="メイン画像" /></swiper-slide>
-            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-01.jpg" alt="メイン画像" /></swiper-slide>
-            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-02.jpg" alt="メイン画像" /></swiper-slide>
+            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-04.jpg" alt="メイン画像" /></swiper-slide>
+            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-05.jpg" alt="メイン画像" /></swiper-slide>
+            <swiper-slide class="p-main-visual__image"><img src="@/assets/images/img-main-visual-06.jpg" alt="メイン画像" /></swiper-slide>
           </swiper>
       </div>
 
