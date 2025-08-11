@@ -15,7 +15,7 @@ definePageMeta({
     </section>
 
     <section class="l-section">
-      <News />
+      <News :limit="10"/>
     </section>
 
   </div>
