@@ -8,7 +8,7 @@
     <div class="l-footer__content">
       <div class="l-footer__logo">
         <NuxtLink to="/">
-          <NuxtImg src="images/logo-white.svg" alt="まのちゃんず！｜ 魔ノむえる公式ファンサイト" width="237" format="webp"/>
+          <NuxtImg src="images/logo-white.svg" alt="まのちゃんず！｜ 魔ノむえる公認ファンサイト" width="237" format="webp"/>
         </NuxtLink>
       </div>
       <ul class="l-footer__list">

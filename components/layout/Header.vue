@@ -36,7 +36,7 @@ function anchorTo(event: Event) {
   <div class="l-header__container">
     <h1 class="l-header__logo">
       <NuxtLink to="/">
-        <NuxtImg src="images/logo.svg" alt="まのちゃんず！｜ 魔ノむえる公式ファンサイト" width="444" format="webp"/>
+        <NuxtImg src="images/logo.svg" alt="まのちゃんず！｜ 魔ノむえる公認ファンサイト" width="444" format="webp"/>
       </NuxtLink>
     </h1>
     <nav class="l-header__nav">
