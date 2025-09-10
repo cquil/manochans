@@ -10,6 +10,9 @@ $xs: 32px;
 
 
 .l-section {
+  &.is-has-event:has(.p-news__empty) {
+    display: none;
+  }
   &.is-xlg {
     padding: $xlg 0;
     @include breakpoint(950, down) {
