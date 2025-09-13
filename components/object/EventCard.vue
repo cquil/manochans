@@ -42,36 +42,34 @@ const eventData = computed(() => {
 
 <template>
 
-<div class="p-news">
+<div class="p-news is-home">
 
     <!-- イベントがある場合 -->
-    <template v-if="eventData.length > 0">
-      <div v-for="item in eventData" :key="item.id">
-        <NuxtLink
-          v-if="item.url"
-          :to="item.url"
-          class="p-news__item"
-          data-aos="custom-up"
-          data-aos-duration="600"
-          target="_blank"
-        >
-          <div class="p-news__image"><img :src="item.image.url" /></div>
-          <div class="p-news__content">
-            <div class="p-news__title">{{ item.title }}</div>
-            <div class="p-news__post">{{ dateFormat(item.event_date) }}</div>
-          </div>
-        </NuxtLink>
-        <div
-          v-else
-          class="p-news__item"
-          data-aos="custom-up"
-          data-aos-duration="600"
-        >
-          <div class="p-news__image"><img :src="item.image.url" /></div>
-          <div class="p-news__content">
-            <div class="p-news__title">{{ item.title }}</div>
-            <div class="p-news__post">{{ dateFormat(item.event_date) }}</div>
-          </div>
+    <template v-if="eventData.length > 0" v-for="item in eventData" :key="item.id">
+      <NuxtLink
+        v-if="item.url"
+        :to="item.url"
+        class="p-news__item"
+        data-aos="custom-up"
+        data-aos-duration="600"
+        target="_blank"
+      >
+        <div class="p-news__image"><img :src="item.image.url" /></div>
+        <div class="p-news__content">
+          <div class="p-news__title">{{ item.title }}</div>
+          <div class="p-news__post">{{ dateFormat(item.event_date) }}</div>
+        </div>
+      </NuxtLink>
+      <div
+        v-else
+        class="p-news__item"
+        data-aos="custom-up"
+        data-aos-duration="600"
+      >
+        <div class="p-news__image"><img :src="item.image.url" /></div>
+        <div class="p-news__content">
+          <div class="p-news__title">{{ item.title }}</div>
+          <div class="p-news__post">{{ dateFormat(item.event_date) }}</div>
         </div>
       </div>
     </template>
