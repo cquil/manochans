@@ -4,7 +4,7 @@ import { microcmsClient } from '../utils/microcms';
 export default defineEventHandler(async (event) => {
   try {
     const query = getQuery(event);
-    const limit = parseInt(query.limit as string) || 10;
+    const limit = parseInt(query.limit as string) || 100;
     const offset = parseInt(query.offset as string) || 0;
 
     const data = await microcmsClient.get({

@@ -19,19 +19,16 @@ const dateFormat = (dateString: string) => {
 const now = new Date();
 
 // 1週間後の日時を計算
-const oneWeekLater = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+const oneWeekLater = new Date(now.getTime() + 8 * 24 * 60 * 60 * 1000);
 
 // イベントデータをフィルタリング
 const eventData = computed(() => {
   if (!data.value?.contents) return [];
-  
   return data.value.contents.filter((item: any) => {
     // event_checkがtrueかどうかチェック
     if (!item.event_check) return false;
-    
     // event_dateが存在するかチェック
     if (!item.event_date) return false;
-    
     // event_dateが現在から1週間以内かチェック
     const eventDate = new Date(item.event_date);
     return eventDate >= now && eventDate <= oneWeekLater;
