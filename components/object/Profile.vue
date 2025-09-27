@@ -6,15 +6,13 @@
 <template>
 
   <div class="p-profile">
-
-
     <div class="p-profile__item" data-aos="custom-up" data-aos-duration="600">
       <Headings text="プロフィール" marginClass="is-xxs-bottom" />
       <table class="c-table p-profile__item-table">
         <tbody>
           <tr>
             <th>名前</th>
-            <td>魔ノむえる</td>
+            <td>魔ノむえる（まのむえる）</td>
           </tr>
           <tr>
             <th>誕生日</th>
@@ -27,6 +25,10 @@
           <tr>
             <th>身長</th>
             <td>153cm</td>
+          </tr>
+          <tr>
+            <th>所属</th>
+            <td>個人勢</td>
           </tr>
         </tbody>
       </table>
@@ -63,8 +65,10 @@
         </tbody>
       </table>
       <div class="p-profile__item-buttons">
-        <NuxtLink to="https://www.youtube.com/channel/UCFqVAFANOHm17UVy8sWkhqw" target="_blank" class="c-button p-profile__item-button">Youtube</NuxtLink>
-        <NuxtLink to="https://x.com/Mano_muerU/" target="_blank" class="c-button p-profile__item-button">X</NuxtLink>
+        <a href="https://www.youtube.com/channel/UCFqVAFANOHm17UVy8sWkhqw" target="_blank" class="c-button p-profile__item-button">Youtube</a>
+        <a href="https://x.com/Mano_muerU/" target="_blank" class="c-button p-profile__item-button">X</a>
+        <a href="https://www.twitch.tv/manomueru" target="_blank" class="c-button p-profile__item-button">Twitch</a>
+        <a href="https://marshmallow-qa.com/mano_mueru?utm_medium=url_text&utm_source=promotion" target="_blank" class="c-button p-profile__item-button">マシュマロ</a>
       </div>
     </div>
 
