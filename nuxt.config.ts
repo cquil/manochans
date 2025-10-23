@@ -65,7 +65,7 @@ export default defineNuxtConfig({
   },
 
   gtm: {
-    id: 'GTM-NKWPK4TH',
+    id: process.env.GTM_ID,
     enabled: true
   },
 
