@@ -14,7 +14,10 @@ definePageMeta({
         <Mainvisual />
       </div>
       <div class="l-two-column__contents">
-        <section class="l-section"><FirstView /></section>
+        <section class="l-section">
+          <p class="p-first-view__text">こちらはdev branchになります。</p>
+          <FirstView />
+        </section>
         <section class="l-section"><Lead /></section>
         <section class="l-section is-xlg is-top is-has-event">
           <Headings text="直近のイベント情報" marginClass="is-xxs-bottom" />
